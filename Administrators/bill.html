@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>APPLE STORE - Bills</title>
+		<link rel="shortcut icon" href="../Image/favicon/favicon.ico">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link href="../CSS/admin.css" rel="stylesheet" type="text/css">
+		<script src="../JS/Javascript.js"></script>
+		<script src="../JS/Admin.js"></script>
+	</head>
+
+	<body onLoad=" checkAdmin(); showbilllist()">
+			<!--PHẦN HEADER-->
+			<div id="header">
+					<!--LOGO-->
+					<p>
+						<a href="../index.html" id="logo">
+							<img id="logo-main" src="../Image/Logo1.jpg" alt="AppleStore" width="90px" height="90px" style="float: left; margin-left: 15%" />
+						</a>
+					</p>
+					<!--LOGO - END-->
+				
+					<!--THANH MENU TOP-->
+					<ul class="top">
+						<li id="final">
+							<img src="../Image/icon/map.svg"/><a href="user.html">User Management</a>
+						</li>
+						<li>
+							<img src="../Image/icon/multiple-users.svg"/><a href="user.html">Customer</a>
+						</li>
+						<li>
+							<img src="../Image/icon/bill.svg"/><a href="bill.html">Bill</a>
+						</li>
+						<li>
+							<img src="../Image/icon/Apple.svg"><a href="admin.html">Product</a>
+						</li>
+						<li>
+							<img src="../Image/icon/home.svg"/><a href="../index.html">Home</a>
+						</li>
+					</ul>
+					<!--THANH MENU TOP - END-->
+			</div>
+			<!--PHẦN HEADER - END-->
+		
+			<div id="maincontent">
+				<div id="nav">
+					<div id="nameAdmin">
+					</div>
+				</div>
+			
+				<div id="content">
+					<div id="rightsection">
+						<div class="subsection" id="billSearch">
+							<h2>SEARCH BILL</h2>
+							<form>
+								<label for="status">STATUS</label>
+								<select id="statussearch">
+									<option value="Unconfimred">Unconfimred</option>
+									<option value="Confimred">Confimred</option>
+								</select >
+								<label for="date">PERIOD</label>
+								<input type="date" id="date">
+								<button type="button" onclick="searchBill()">SEARCH</button>
+							</form>
+						</div>
+					</div>
+				
+					<div id="leftsection">
+						<div id="maintable">
+							<h1>LIST OF BILLS</h1>
+							<table id="billlist">
+								<tr>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="modal1" class="modal">
+				<div id="info">
+					<div class="image">
+						<img id="imgbefore" src="">
+					</div>
+				</div>
+			</div>
+	</body>
+</html>
+
+

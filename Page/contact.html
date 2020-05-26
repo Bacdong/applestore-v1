@@ -1,0 +1,256 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>APPLE STORE - Check for counterfeit products</title>
+		<link rel="shortcut icon" href="../Image/favicon/favicon.ico">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link href="../CSS/style.css" rel="stylesheet" type="text/css">
+		<script src="../JS/Javascript.js"></script>
+	</head>
+
+	<body onLoad="checklogin(); showProduct(); showSlides();">
+			<!--PHẦN HEADER-->
+			<div id="header">
+					<!--LOGO-->
+					<p>
+						<a href="../index.html" id="logo">
+							<img id="logo-main" src="../Image/Logo1.jpg" alt="AppleStore" width="90px" height="90px" style="float: left; margin-left: 15%" />
+						</a>
+					</p>
+					<!--LOGO - END-->
+				
+					<!--THANH MENU TOP-->
+					<ul class="top">
+						<div class="cart">
+							<button type="submit" onClick="location.href='cart.html'" class="cart"><i class="fa fa-shopping-cart"></i></button>
+						</div>
+						<div class="user">
+							<button type="submit" onClick="showform()" class="user"><i class="fa fa-user"></i></button>
+						</div>
+						<li>
+							<a href="../index.html?watch&0">Watch</a>
+						</li>
+						<li>
+							<a href="../index.html?mac&0">Mac</a>
+						</li>
+						<li>
+							<a href="../index.html?ipad&0">iPad</a>
+						</li>
+						<li>
+							<a href="../index.html?iphone&0">iPhone</a>
+						</li>
+						<li>
+							<a href="../index.html">Home</a>
+						</li>
+					</ul>
+					<!--THANH MENU TOP - END-->
+			</div>
+			<!--PHẦN HEADER - END-->
+		
+			<!--PHẦN BANNER HÌNH ẢNH-->
+			<div class="banner">
+				<!--PHẦN TÊN USER KHI LOGIN VÀO THÀNH CÔNG-->
+				<div id="nav">
+					<div id="nameAdmin">
+					</div>
+				</div>
+				<!--PHẦN TÊN USER KHI LOGIN VÀO THÀNH CÔNG - END-->
+			</div>
+			<!--PHẦN BANNER HÌNH ẢNH - END-->
+			
+			<!--PHẦN TẠO FORM ĐĂNG NHẬP VÀ ĐĂNG KÝ-->
+			<div id="showform" class="modal">
+				<!--LOGIN-->
+				<div id="login">
+					<form id="loginform" onSubmit="login();">
+						<button type="button" class="close" onClick="closeform()">+</button>
+						<h2>LOGIN</h2>
+						<div class="logininfo">
+							<div class="col">
+								<label>USERNAME: </label>
+								<input type="text" placeholder="Username" id="usernameLogin">
+								<label>PASSWORD: </label>
+								<input type="password" placeholder="Password" id="passwordLogin">
+							</div>
+						</div>
+						<button type="submit" id="btnlogin">LOGIN</button>
+						<p>Do not have an account?<a onClick="showSignUp()"> Register now!</a></p>
+					</form>
+				</div>
+				<!--LOGIN - END-->
+				
+				<!--SIGNUP-->
+				<div id="signup">
+					<form id="signupform" onSubmit="createUser();">
+						<button type="button" class="close" onClick="closeform()">+</button>
+						<h2>SIGN UP</h2>
+						<div class="col">
+							<label>YOUR FULLNAME: </label>
+							<input type="text" placeholder="Full name" id="fullnameSignup"> 
+							<label>YOUR ADDRESS: </label>
+							<input type="text" placeholder="Address" id="addressSignup">
+							<label>YOUR PHONE NUMBER: </label>
+							<input type="text" placeholder="Phone" id="phoneSignup">
+							<label>USERNAME: </label>
+							<input type="text" placeholder="Username" id="usernameSignup">
+							<label>PASSWORD: </label>
+							<input type="password" placeholder="Password" id="passwordSignup">
+							<label>CONFIRM PASSWORD: </label>
+							<input type="password" placeholder="Confirm Password" id="confirmPasswordSignup">
+						</div>
+						<button type="submit" id="btnsignup">SIGN UP</button>
+						<p>Back to page <a onClick="showLogin()">LOGIN</a></p>
+					</form>	
+				</div>
+				<!--SIGNUP - END-->
+			</div>
+			<!--PHẦN TẠO FORM ĐĂNG NHẬP VÀ ĐĂNG KÝ - END-->
+		
+			<!--HIỂN THỊ 3 ƯU ĐIỂM-->
+			<div id="commitment">
+				<!--GIAO HÀNG NHANH-->
+				<div class="fast-delivery">
+					<div class="item1">
+						<img src="../Image/item/item1.png" alt="GIAO HÀNG NHANH" />
+					</div>
+					<div class="title">
+						<h3>FAST DELIVERY</h3>
+						<p class="desciption">Prompt delivery in 2-3 days</p>
+					</div>
+				</div>
+				<!--GIAO HÀNG NHANH - END-->
+				
+				<!--CAM KẾT CHÍNH HÃNG-->
+				<div class="genuine">
+					<div class="item2">
+						<img src="../Image/item/item2.png" alt="CAM KẾT CHẤT LƯỢNG" />
+					</div>
+					<div class="title">
+						<h3>COMMITMENT TO QUALITY</h3>
+						<p class="desciption">100% real goods</p>
+					</div>
+				</div>
+				<!--CAM KẾT CHÍNH HÃNG - END-->
+				
+				<!--HỖ TRỢ MUA HÀNG-->
+				<div class="support">
+					<div class="item3">
+						<img src="../Image/item/item3.png" alt="HỖ TRỢ MUA HÀNG" />
+					</div>
+					<div class="title">
+						<h3>SUPPORT SERVICES</h3>
+						<p class="desciption">Dedicated advice, support for product exchange</p>
+					</div>
+				</div>
+				<!--HỖ TRỢ MUA HÀNG - END-->
+			</div>
+			<!--PHẦN 3 ƯU ĐIỂM - END-->
+		
+			<!--THANH MENU DANH SÁCH SẢN PHẨM-->
+			<div class="botmenu" id="kiemtrahanggia">
+				<div class="search-box">
+					<!-- PHẦN SEARCH BOX -->
+				</div>
+			
+				<p onClick="location.href='contact.html'">--- CHECK FAKE PRODUCTS ---</p>
+			</div>
+			<!--THANH MENU DANH SÁCH SẢN PHẨM - END-->
+		
+			<!--THANH MENU LOGO APPLE-->
+			<div class="logomenu">
+				<a href="../index.html?iphone&0" id="iphone">
+					<img src="../Image/logo/iPhone.jpg" width="98px" height="30px">
+				</a>
+				<a href="../index.html?ipad&0" id="ipad">
+					<img src="../Image/logo/iPad.jpg" width="98px" height="30px">
+				</a>
+				<a href="../index.html?mac&0" id="macbook">
+					<img src="../Image/logo/MacBook.jpg">
+				</a>
+				
+			</div>
+			<!--THANH MENU LOGO APPLE - END-->
+			
+			<!--PHẦN MAIN-->
+			<div id="main">
+				<div class="container" id="maincontent">
+					<div id="contact" style="width: 100%; height: 500px; background: linear-gradient(to top left, #999, white)">
+						<div class="container">
+							<div id="contactbox">
+								<h3>CHECK FAKE PRODUCTS</h3>
+									<i>
+										<p> <strong>Có thể bạn chưa biết!</strong> Ngày nay, vấn đề làm giả mạo hàng hóa và đặc biệt là các sản phẩm công nghệ ngày càng nhiều mà chất lượng thì lại không đảm bảo làm suy giảm lòng tin của khách hàng dành cho các sản phẩm chính hãng, chúng tôi rất tiếc về điều này. Vì vậy, nếu bạn muốn sở hữu sản phầm <strong>Apple</strong> chính hãng, đảm bảo về mọi mặt thì đừng ngần ngại tìm đến chúng tôi. Chúng tôi đảm bảo sẽ mang lại cho bạn những trải nghiệm thú vị về thái độ tận tình và chất lượng sản phẩm. </p>
+									</i>
+									<p><br></p>
+									<p><strong>Address:</strong><i> 273 An Dương Vương, Phường 3, Quận 5, TP.HCM</i></p>
+									<p><br></p>
+									<p><strong>Email: &nbsp;&nbsp;&nbsp;<i>duongdong2203@gmail.com</i></strong></p>
+									<p><strong>Email: &nbsp;&nbsp;&nbsp;<i>trunghau1312@gmail.com</i></strong></p>
+									<p><strong>Email: &nbsp;&nbsp;&nbsp;<i>luhanz2504@gmail.com</i></strong></p>
+									<p><strong>Email: &nbsp;&nbsp;&nbsp;<i>anhducosin1@gmail.com</i></strong></p>
+									<p><br></p>
+									<p><strong>Hotline:</strong> 0915 272 291</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--PHẦN MAIN - END-->
+		
+			<!--PHẦN EMAIL-->
+			<div id="mail">
+				<h2>Sign up to receive the latest promotion information</h2>
+				<input type="email" id="customermail" placeholder="Enter your email...">
+				<button type="button">&#62;</button>
+			</div>
+			<!--PHẦN EMAIL - END-->	
+		
+			<!--PHẦN FOOTER-->
+			<div id="foot">
+				<div class="container">
+					<div class="topfoot">
+						<div class="footmenu" id="footmenu">
+							<a href="../index.html"><img src="../Image/Logo1.jpg" alt="AppleStore"></a>
+							<div class="foot-link" style="text-align: center">
+								<ul class="left-foot">
+									<li><a href="https://www.facebook.com/"><img src="../Image/icon/facebookicon.svg"></a></li>
+									<li><a href="https://www.instagram.com/"><img src="../Image/icon/instagramicon.svg"></a></li>
+									<li><a href="https://www.youtube.com/"><img src="../Image/icon/youtubeicon.svg"></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="footmenu">
+							<h4>NOTICE INFORMATION</h4>
+							<a href="contact.html">Check for counterfeit products</a><br>
+							<a href="contact1.html">Warranty guide</a><br>
+							<a href="contact2.html">Product exchange regulations</a>
+						</div>
+						<div class="footmenu">
+							<h4>INTRODUCE</h4>
+							<a href="contact3.html">Conception of Apple</a><br>
+							<a href="contact4.html">Store listing</a><br>
+							<a href="contact4.html">For Showroom</a>
+						</div>
+						<div class="footmenu">
+							<h4>CONTACT INFO</h4>
+							<a href="https://www.google.com/maps/place/273+An+D%C6%B0%C6%A1ng+V%C6%B0%C6%A1ng,+Ph%C6%B0%E1%BB%9Dng+3,+Qu%E1%BA%ADn+5,+H%E1%BB%93+Ch%C3%AD+Minh/@10.7599758,106.679925,17z/data=!3m1!4b1!4m5!3m4!1s0x31752f1c81c64183:0xd3109d7a7a8f753c!8m2!3d10.7599758!4d106.6821137?hl=vi-VN">Address: 273 An Duong Vuong St, Ward 3, District 5, HCM City</a>
+							<p>Hotline: 0915272291 </p>
+						</div>
+						<div class="footmenu">
+							<h4>FACEBOOK CONTACT</h4>
+							<a href="https://www.facebook.com/HuynhAnhThu.0201/" target="_blank">Dương Bắc Đông</a><br>
+							<a href="https://www.facebook.com/trung.hau.96592/" target="_blank">Bùi Trung Hậu</a><br>
+							<a href="https://www.facebook.com/duchoa2504/" target="_blank">Lưu Đức Hòa</a><br>
+							<a href="https://www.facebook.com/anhducjav2/" target="_blank">Lê Nguyễn Anh Đức</a>
+						</div>
+					<div class="botfoot">
+						<p>2019 &#169; Copyright AppleStore. All Rights Reserved - Designed by Team Full-Stack.</p>
+					</div>
+				</div>
+			</div>
+		</div>	
+		<!--PHẦN FOOTER - END-->
+	</body>
+</html>

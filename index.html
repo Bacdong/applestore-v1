@@ -1,0 +1,310 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>APPLE STORE</title>
+		<!-- FAVICON CHO TRANG WEB -->
+		<link rel="shortcut icon" href="Image/favicon/favicon.ico">
+		<!-- FAVICON CHO TRANG WEB - END -->
+		<link href="CSS/style.css" rel="stylesheet" type="text/css">
+		<!-- IMPORT ĐƯỜNG DẪN ĐỂ SỬ DỤNG ICON USER, CART,... -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+		<!-- IMPORT ĐƯỜNG DẪN ĐỂ SỬ DỤNG ICON USER, CART,... - END -->
+		<script src="JS/Javascript.js"></script>
+		<script src="JS/Admin.js"></script>
+	</head>
+
+	<body onLoad="showProduct(); checklogin();">
+			<!--PHẦN HEADER-->
+			<div id="header">
+					<!--LOGO-->
+					<p>
+						<a href="index.html" id="logo">
+							<!--<i class="fab fa-apple"></i>-->
+							
+							<img id="logo-main" src="Image/Logo1.jpg" alt="AppleStore" width="90px" height="90px" style="float: left; margin-left: 15%" />
+						</a>
+					</p>
+					<!--LOGO - END-->
+				
+					<!--THANH MENU TOP-->
+					<ul class="top">
+						<div class="cart">
+							<button type="submit" onClick="location.href='Page/cart.html'" class="cart"><i class="fa fa-shopping-cart"></i></button>
+						</div>
+						<div class="user">
+							<button type="submit" onClick="showform()" class="user"><i class="fa fa-user"></i></button>
+						</div>
+						<li>
+							<a href="index.html?watch&0">Watch</a>
+						</li>
+						<li>
+							<a href="index.html?mac&0">Mac</a>
+						</li>
+						<li>
+							<a href="index.html?ipad&0">iPad</a>
+						</li>
+						<li>
+							<a href="index.html?iphone&0">iPhone</a>
+						</li>
+						<li>
+							<a href="index.html">Home</a>
+						</li>
+					</ul>
+					<!--THANH MENU TOP - END-->
+			</div>
+			<!--PHẦN HEADER - END-->
+		
+			<!--PHẦN BANNER HÌNH ẢNH-->
+			<div class="banner">
+				
+				<!--PHẦN TÊN USER KHI LOGIN VÀO THÀNH CÔNG-->
+				<div id="nav">
+					<div id="nameAdmin">
+					</div>
+				</div>
+				<!--PHẦN TÊN USER KHI LOGIN VÀO THÀNH CÔNG - END-->
+				
+				<div class="picture" style="background: #000">
+						<video muted="muted" loop="true" autoplay="true" width="100%" height="500px" 
+						src="http://www.maccenter.vn/adv_Images/Video-iPhone11.mp4"></video>
+				</div>
+			</div>
+			<!--PHẦN BANNER HÌNH ẢNH - END-->
+			
+			<!--PHẦN TẠO FORM ĐĂNG NHẬP VÀ ĐĂNG KÝ-->
+			<div id="showform" class="modal">
+				<!--LOGIN-->
+				<div id="login">
+					<form id="loginform" onSubmit="login();">
+						<button type="button" class="close" onClick="closeform()">+</button>
+						<h2>LOGIN</h2>
+						<div class="logininfo">
+							<div class="col">
+								<label>USERNAME: </label>
+								<input type="text" placeholder="Username" id="usernameLogin">
+								<label>PASSWORD: </label>
+								<input type="password" placeholder="Password" id="passwordLogin">
+							</div>
+						</div>
+						<button type="submit" id="btnlogin">LOGIN</button>
+						<p>Do not have an account?<a onClick="showSignUp()"> Register now!</a></p>
+					</form>
+				</div>
+				<!--LOGIN - END-->
+				
+				<!--SIGNUP-->
+				<div id="signup">
+					<form id="signupform" onSubmit="createUser();">
+						<button type="button" class="close" onClick="closeform()">+</button>
+						<h2>SIGN UP</h2>
+						<div class="col">
+							<label>YOUR FULLNAME: </label>
+							<input type="text" placeholder="Full name" id="fullnameSignup"> 
+							<label>YOUR ADDRESS: </label>
+							<input type="text" placeholder="Address" id="addressSignup">
+							<label>YOUR PHONE NUMBER: </label>
+							<input type="text" placeholder="Phone" id="phoneSignup">
+							<label>USERNAME: </label>
+							<input type="text" placeholder="Username" id="usernameSignup">
+							<label>PASSWORD: </label>
+							<input type="password" placeholder="Password" id="passwordSignup">
+							<label>CONFIRM PASSWORD: </label>
+							<input type="password" placeholder="Confirm Password" id="confirmPasswordSignup">
+						</div>
+						<button type="submit" id="btnsignup">SIGN UP</button>
+						<p>Back to page <a onClick="showLogin()">LOGIN</a></p>
+					</form>	
+				</div>
+				<!--SIGNUP - END-->
+			</div>
+			<!--PHẦN TẠO FORM ĐĂNG NHẬP VÀ ĐĂNG KÝ - END-->
+		
+			<!--PHẦN BANNER ADVERTISEMENT-->
+			<div style="width: 100%">
+				<img src="Image/banner/Banner_bottom.png" width="100%" height="150px">
+			</div>
+			<!--PHẦN BANNER ADVERTISEMENT - END-->
+		
+			<!--HIỂN THỊ 3 ƯU ĐIỂM-->
+			<div id="commitment">
+				<!--GIAO HÀNG NHANH-->
+				<div class="fast-delivery">
+					<div class="item1">
+						<img src="Image/item/item1.png" alt="GIAO HÀNG NHANH" />
+					</div>
+					<div class="title">
+						<h3>FAST DELIVERY</h3>
+						<p class="desciption">Prompt delivery in 2-3 days</p>
+					</div>
+				</div>
+				<!--GIAO HÀNG NHANH - END-->
+				
+				<!--CAM KẾT CHÍNH HÃNG-->
+				<div class="genuine">
+					<div class="item2">
+						<img src="Image/item/item2.png" alt="CAM KẾT CHẤT LƯỢNG" />
+					</div>
+					<div class="title">
+						<h3>COMMITMENT TO QUALITY</h3>
+						<p class="desciption">100% real goods</p>
+					</div>
+				</div>
+				<!--CAM KẾT CHÍNH HÃNG - END-->
+				
+				<!--HỖ TRỢ MUA HÀNG-->
+				<div class="support">
+					<div class="item3">
+						<img src="Image/item/item3.png" alt="HỖ TRỢ MUA HÀNG" />
+					</div>
+					<div class="title">
+						<h3>SUPPORT SERVICES</h3>
+						<p class="desciption">Dedicated advice, support for product exchange</p>
+					</div>
+				</div>
+				<!--HỖ TRỢ MUA HÀNG - END-->
+			</div>
+			<!--PHẦN 3 ƯU ĐIỂM - END-->
+		
+			<!--THANH MENU DANH SÁCH SẢN PHẨM-->
+			<div class="botmenu">
+				<div class="search-box" id="searchextend">
+					<input type="text" onKeyUp="search();" onChange="search();" placeholder="Search..." name="search" id="search">
+					<button type="submit" onClick="search();" class="search"><i class="fa fa-search"></i></button>
+				</div>
+				<a href="index.html">--- PRODUCT PORTFOLIO ---</a>
+			</div>
+			<!--THANH MENU DANH SÁCH SẢN PHẨM - END-->
+		
+			<!--THANH MENU LOGO APPLE-->
+			<div class="logomenu">
+				<a href="index.html?iphone&0" id="iphone">
+					<img src="Image/logo/iPhone.jpg" width="98px" height="30px">
+				</a>
+				<a href="index.html?ipad&0" id="ipad">
+					<img src="Image/logo/iPad.jpg" width="98px" height="30px">
+				</a>
+				<a href="index.html?mac&0" id="macbook">
+					<img src="Image/logo/MacBook.jpg">
+				</a>
+				
+				<div id="search2">
+					<form id="search3" onchange="">
+						<label for="searchproductprice"><strong>PRICE FROM</strong></label>
+						<select id="searchpaboutprice">
+							<option value="default">DEFAULT</option>
+							<option value="below500">$0 - $500</option>
+							<option value="below1000">$500 - $1000</option>
+							<option value="below1500">$1000 - $1500</option>
+							<option value="below2000">$1500 - $2000</option>
+							<option value="below2500">$2000 - $2500</option>
+							<option value="below3000">$2500 - $3000</option>
+						</select>
+						<button type="button" onClick="">SEARCH</button>
+					</form>
+			</div>
+			</div>
+			
+			<!--THANH MENU LOGO APPLE - END-->
+			
+			<!--PHẦN MAIN-->
+			<div id="main">
+				<div class="container" id="maincontent">
+					<div id="product">
+						<!--PHẦN PRODUCT-->
+					</div>
+					
+					<!--PHẦN HIỂN THỊ THÔNG TIN SẢN PHẦM-->
+					<div id="productInfo" class="modal" style="background-color: #rgba(44, 69, 88, 0.9)">
+						<div id="info">
+							<button type="button" class="close" onClick="closeProductInfo()">+</button>
+							<div class="left">
+								<img id="imgbig" src="">
+							</div>
+							<div class="right">
+								<h2 id="productname"></h2>
+								<h4 id="productprice"></h4>
+								<h4 id="productdetail">PRODUCT CONFIGURATION</h4>
+									<ul id="productDetail">
+										<!-- PHẦN CẤU HÌNH SẢN PHẨM -->
+									</ul>
+								</div>
+							<div class="right" id="soluong">	
+								<h4>QUANTITY</h4>
+								<button class="quantitydown" onClick="quantitydown()">&lsaquo;</button><input type="text" id="quantity" value="1"><button class="quantityup" onClick="quantityup()">&rsaquo;</button>
+								<button class="addtocart" onClick="addToCart()">ADD TO CART</button>
+							</div>
+						</div>
+					</div>
+					<!--PHẦN HIỂN THỊ THÔNG TIN SẢN PHẦM - END-->
+					
+					<!--PAGE-->
+					<div id="page">
+						&nbsp;
+					</div>
+					<!--PAGE - END-->
+					
+				</div>
+			</div>
+			<!--PHẦN MAIN - END-->
+		
+			<!--PHẦN EMAIL-->
+			<div id="mail">
+				<h2>Sign up to receive the latest promotion information</h2>
+				<input type="email" id="customermail" placeholder="Enter your email...">
+				<button type="button"><i class="far fa-envelope"></i></button>
+			</div>
+			<!--PHẦN EMAIL - END-->	
+		
+			<i class="fa fa-arrow-up" id="goto-top-page" onClick="gotoTop()"></i>
+		
+			<!--PHẦN FOOTER-->
+			<div id="foot">
+				<div class="container">
+					<div class="topfoot">
+						<div class="footmenu" id="footmenu">
+							<a href="index.html"><img src="Image/Logo1.jpg" alt="AppleStore"></a>
+							<div class="foot-link" style="text-align: center">
+								<ul class="left-foot">
+									<li><a href="https://www.facebook.com/HuynhAnhThu.0201/"><img src="Image/icon/facebookicon.svg"></a></li>
+									<li><a href="https://www.instagram.com/"><img src="Image/icon/instagramicon.svg"></a></li>
+									<li><a href="https://www.youtube.com/channel/UC2tyyHnpy_gS30lI740K3CA/"><img src="Image/icon/youtubeicon.svg"></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="footmenu">
+							<h4>NOTICE INFORMATION</h4>
+							<a href="Page/contact.html">Check for counterfeit products</a><br>
+							<a href="Page/contact1.html">Warranty guide</a><br>
+							<a href="Page/contact2.html">Product exchange regulations</a>
+						</div>
+						<div class="footmenu">
+							<h4>INTRODUCE</h4>
+							<a href="Page/contact3.html">Conception of Apple</a><br>
+							<a href="Page/contact4.html">Store listing</a><br>
+							<a href="Page/contact4.html">For Showroom</a>
+						</div>
+						<div class="footmenu">
+							<h4>CONTACT INFO</h4>
+							<a href="https://www.google.com/maps/place/273+An+D%C6%B0%C6%A1ng+V%C6%B0%C6%A1ng,+Ph%C6%B0%E1%BB%9Dng+3,+Qu%E1%BA%ADn+5,+H%E1%BB%93+Ch%C3%AD+Minh,+Vi%E1%BB%87t+Nam/@10.7599811,106.679925,17z/data=!3m1!4b1!4m5!3m4!1s0x31752f1c81c64183:0xd3109d7a7a8f753c!8m2!3d10.7599758!4d106.6821137?hl=vi-VN">Address: 273 An Duong Vuong St, Ward 3, District 5, HCM City</a>
+							<p>Hotline: 0915272291 </p>
+						</div>
+						<div class="footmenu">
+							<h4>FACEBOOK CONTACT</h4>
+							<a href="https://www.facebook.com/HuynhAnhThu.0201/" target="_blank">Dương Bắc Đông</a><br>
+							<a href="https://www.facebook.com/trung.hau.96592/" target="_blank">Bùi Trung Hậu</a><br>
+							<a href="https://www.facebook.com/duchoa2504/" target="_blank">Lưu Đức Hòa</a><br>
+							<a href="https://www.facebook.com/anhducjav2/" target="_blank">Lê Nguyễn Anh Đức</a>
+						</div>
+					<div class="botfoot">
+						<p>2019 &#169; Copyright AppleStore. All Rights Reserved - Designed by Team Full-Stack.</p>
+					</div>
+				</div>
+			</div>
+		</div>	
+		<!--PHẦN FOOTER - END-->
+	</body>
+</html>

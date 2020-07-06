@@ -8,10 +8,13 @@ Before you begin, you should delete localStorage in your browser
 and make sure you have the IDE ready to support writing code.
 
 * Eg. Visual Studio Code
+* Eg. Sublime Text
+* Eg. Notepad++
+* ...
 
 * Account for administrator access:
-- username: admin
-- password: admin
+  username: admin
+  password: admin
 
 
 Participants:

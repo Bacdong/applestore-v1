@@ -13,8 +13,8 @@ and make sure you have the IDE ready to support writing code.
 * ...
 
 * Account for administrator access:
-  -username: admin
-  -password: admin
+  # username: admin
+  # password: admin
 
 
 Participants:

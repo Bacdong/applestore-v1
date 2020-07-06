@@ -1,5 +1,4 @@
-# ProjectWeb1_With_HTML-CSS-JS
-Project name: Apple Store.
+# Project name: Apple Store.
 
 This is a MyTeam Project AppleStore Website - HTML/CSS and JS. 
 Full interactive features with users and admin.

@@ -2,7 +2,7 @@
 
 ### Introduction:
 ```
-  This is a MyTeam Project AppleStore Website - HTML/CSS and JS. 
+This is a MyTeam Project AppleStore Website - HTML/CSS and JS. 
 Full interactive features with users and admin.
 ```
 

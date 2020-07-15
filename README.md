@@ -1,6 +1,6 @@
 ## Project name: Apple Store.
 ```
-Project for subjects "Web application development 1" 
+Project for subjects \"Web application development 1\" at Saigon University.
 ```
 
 ### Introduction:

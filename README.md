@@ -1,4 +1,7 @@
 ## Project name: Apple Store.
+```
+Project for subjects "Web application development 1" 
+```
 
 ### Introduction:
 ```

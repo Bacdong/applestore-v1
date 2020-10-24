@@ -1,4 +1,4 @@
-## Project name: Apple Store.
+# Apple Store Version 1 #
 
 https://bacdong.github.io/web_only_frontend/
 

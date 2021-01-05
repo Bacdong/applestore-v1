@@ -1,5 +1,7 @@
 # Apple Store Version 1 #
 
+![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=Bacdong&theme=dark&show_icons=true)
+
 [See more](https://bacdong.github.io/web_only_frontend/)
 
 ```

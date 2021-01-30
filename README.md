@@ -1,6 +1,6 @@
 # Apple Store Version 1 #
 
-[See more](https://bacdong.github.io/applestore-v1/)
+[See more](http://applestore-v1.tk/)
 
 ```
 Project for subjects \"Web application development 1\" at Saigon University.
